@@ -1,16 +1,21 @@
+import React from 'react';
 import '@styles/globals.css';
 
-export const metadata = {
-    title: "Promptus",
-    description: "Discover AI prompt you can share with your loved ones"
-}
-
-const layout = () => {
+const RootLayout = ({ children }) => {
   return (
-    <div>
-      
-    </div>
+    <html lang='en'>
+        <body>
+            <div className='main'>
+                <div className='gradient'>
+
+                </div>
+            </div>
+            <main className='app'>
+                {children}
+            </main>
+        </body>
+    </html>
   )
 }
 
-export default layout
+export default RootLayout
