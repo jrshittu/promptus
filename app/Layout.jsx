@@ -1,6 +1,11 @@
-import React from 'react';
+import '@styles/globals.css';
 
-const Layout = () => {
+export const metadata = {
+    title: "Promptus",
+    description: "Discover AI prompt you can share with your loved ones"
+}
+
+const layout = () => {
   return (
     <div>
       
@@ -8,4 +13,4 @@ const Layout = () => {
   )
 }
 
-export default Layout
+export default layout
