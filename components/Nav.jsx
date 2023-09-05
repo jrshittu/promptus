@@ -1,4 +1,5 @@
 "use client"; 
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
@@ -15,6 +16,7 @@ const Nav = () => {
           height={30}
           className="object-contain"
         />
+        <p className='logo_text'>Promptus</p>
       </Link>
     </nav>
   )
