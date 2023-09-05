@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { signIn, singOut, useSession, getProviders } from 'next-auth/react';
+import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 
 const isUserLoggedIn = true;
 
@@ -27,6 +27,18 @@ const Nav = () => {
           <div className='flex gap-3 md:gap-5'>
             <Link href="/create-prompt" className='black_btn'>
               Create Post
+            </Link>
+            <button type='button' onClick={signOut} className='outline_btn'>
+              Sign Out
+            </button>
+            <Link href="/profile">
+              <Image 
+                src="/assets/images/logo.svg"
+                width={37}
+                height={37}
+                className='rounded_full'
+                alt='profile'
+              />
             </Link>
           </div>
         ): (
