@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { signIn, singOut, useSession, getProviders } from 'next-auth/react';
 
+const isUserLoggedIn = true;
+
 const Nav = () => {
   return (
     <nav className='flex-between w-full mb-16 pt-3'>
@@ -18,6 +20,21 @@ const Nav = () => {
         />
         <p className='logo_text'>Promptus</p>
       </Link>
+
+      {/* Mobile Nav */}
+      <div className='sm:flex hidden'>
+        {isUserLoggedIn ? (
+          <div className='flex gap-3 md:gap-5'>
+            <Link href="/create-prompt" className='black_btn'>
+              Create Post
+            </Link>
+          </div>
+        ): (
+          <>
+          </>
+        )
+      }
+      </div>
     </nav>
   )
 }
