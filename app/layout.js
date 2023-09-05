@@ -4,7 +4,7 @@ import Nav from '@components/Nav';
 
 export const metadata = {
     title: "Promptus",
-    description: "Generate AI prompts you can share"
+    description: "Generate AI prompts you can share with loved ones"
 }
 
 const RootLayout = ({ children }) => {
