@@ -11,11 +11,14 @@ export const connectToDB = async () => {
     }
     try {
         await mongoose.connect(process.env.MONGODB_URI, {
-            dbName: "promptus";
+            dbName: "promptus",
             useNewUrlParser: true,
-            
-        })
+            useUnifiedTopology: true,
+        });
+        isConnected = true;
+
+        console.log("MongoDb Connected")
     } catch (error) {
-        
+        console.log(error);
     }
 }
